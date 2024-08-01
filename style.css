@@ -43,6 +43,10 @@ body {
 	padding-bottom: 20px;
 	position: relative;
 }
+.form-control .password-box{
+	display: flex;
+	align-items: center;
+}
 
 .form-control label {
 	display: inline-block;
@@ -70,6 +74,17 @@ body {
 
 .form-control.error input {
 	border-color: #e74c3c;
+}
+
+.form-control .password-box #eyeicon{
+	width: 22px;
+	cursor: pointer;
+	position: absolute;
+	right: 5%;
+	display: none;
+}
+.form-control .password-box #eyeicon.active{
+	display: block;
 }
 
 .form-control i {
@@ -118,4 +133,10 @@ body {
 .form button:hover{
     box-shadow: none;
     background-color: #de5a79;
+}
+
+@media(max-width: 300px){
+	.form-control .password-box #eyeicon{
+		width: 20px;
+	}
 }

@@ -59,3 +59,22 @@ function setSuccessFor(input) {
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+
+let passwordBox = document.querySelector('.password-box');
+let eyeicon = document.getElementById('eyeicon');
+
+passwordBox.onclick =() => {
+	eyeicon.classList.add('active');
+}
+
+eyeicon.onclick = () => {
+	if(password.type == "password"){
+		password.type = "text";
+		eyeicon.src = "eye-open.png";
+	}
+	else{
+		password.type = "password";
+		eyeicon.src = "eye-close.png";
+	}
+}
